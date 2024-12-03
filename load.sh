@@ -1,7 +1,7 @@
 #!/bin/bash
 set -o errexit -o nounset -o pipefail
 
-RUNS=100
+RUNS=500
 
 echo "Starting!"
 for i in `seq $RUNS`; do
