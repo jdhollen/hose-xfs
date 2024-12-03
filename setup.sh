@@ -1,6 +1,8 @@
 #!/bin/bash
 set -o errexit -o nounset -o pipefail -x
 
+sudo rm -rf /var/buildbuddy
+
 sudo mkdir /var/buildbuddy
 
 sudo mdadm --create --verbose /dev/md103 --level=0 --raid-devices=2 /dev/nvme3n1 /dev/nvme4n1
