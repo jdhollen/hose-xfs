@@ -3,6 +3,7 @@
 set -o errexit -o nounset -o pipefail
 
 cd FlameGraph
-perf record -F 99 -a g -- sleep 60
+sudo perf record -F 99 -a -g -- sleep 60
+sudo chmod a+r perf.data
 perf script | ./stackcollapse-perf.pl > out.perf-folded
 ./flamegraph.pl out.perf-folded > perf.svg
