@@ -11,6 +11,8 @@ sudo mount -o logbsize=256k /dev/md103 /var/buildbuddy
 
 sudo mkdir /var/buildbuddy/tmp
 
+sudo chmod a+rw /var/buildbuddy/tmp
+
 lsblk
 
 ./tarwars.sh
