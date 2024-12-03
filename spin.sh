@@ -5,6 +5,6 @@ TMPDIRA=/var/buildbuddy/tmp/$(uuidgen)
 
 mkdir -p $TMPDIRA
 cd $TMPDIRA
-tar xzf ~/bigbad.tar.gz
-cd ~
+tar xzf ~/hose-xfs/bigbad.tar.gz
+cd ~/hose-xfs
 rm -rf $TMPDIRA
