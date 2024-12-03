@@ -13,6 +13,10 @@ apt source linux-image-unsigned-$(uname -r)
 
 # afterward, in kernel root dir..
 # fakeroot debian/rules clean
+
+# you might need to rm an extra dir or two if you're re-running...
+
+# actually build..
 # fakeroot debian/rules binary
 
 # go back up a dir and install
