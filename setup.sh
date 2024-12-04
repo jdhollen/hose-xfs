@@ -1,6 +1,10 @@
 #!/bin/bash
 set -o errexit -o nounset -o pipefail -x
 
+sudo apt-get update
+
+sudo apt-get install git mdadm xfsprogs screen
+
 sudo mkdir /var/buildbuddy
 
 sudo mdadm --create --verbose /dev/md103 --level=0 --raid-devices=4 /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 /dev/nvme4n1

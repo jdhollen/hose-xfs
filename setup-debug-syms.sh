@@ -11,4 +11,6 @@ deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe
 
 sudo apt-get update
 
-sudo apt-get install linux-image-`uname -r`-dbgsym pkg-config-dbgsym
+sudo apt-get install linux-image-`uname -r`-dbgsym xfsprogs-dbgsym
+
+# might need pkg-config-dbgsym to build debug symbols?
