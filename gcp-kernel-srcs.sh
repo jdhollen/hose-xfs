@@ -4,6 +4,8 @@ set -o errexit -o nounset -o pipefail
 
 
 sudo cp /etc/apt/sources.list /etc/apt/sources.list~
+# this line probably works different on newer ubuntu versions -- you may see a warning about
+# missing deb-src sources
 sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 sudo apt-get update
 
